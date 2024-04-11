@@ -175,6 +175,13 @@ gulp.task('copyCSS', function() {
     .pipe(gulp.dest('build' + '/assets/css'));
 });
 
+gulp.task("copyAudios", function () {
+	return gulp
+		.src(
+			dirs.source +"/assets/audio/**/*.{mp3, wav, wma, aac, flac, ogg, aiff, alac, m4a, opus, ac3, amr}")
+		.pipe(gulp.dest("build" + "/assets/audio"));
+});
+
 // ЗАДАЧА: Перемещение скриптов
 gulp.task('copyJS', function() {
     return gulp.src(dirs.source + '/assets/js/**/*.js')
@@ -199,7 +206,7 @@ gulp.task('copy-css', function() {
 gulp.task('build', gulp.series( // последовательно:
     'clean', // последовательно: очистку папки сборки
     'svgstore',
-    gulp.parallel('sass', 'img', 'images', 'imguploads', 'copyFonts', 'copyCSS', 'copyJS'),
+    gulp.parallel('sass', 'img', 'images', 'imguploads', 'copyFonts', 'copyCSS', 'copyJS', 'copyAudios'),
     'html',
     'php'
     // последовательно: сборку разметки

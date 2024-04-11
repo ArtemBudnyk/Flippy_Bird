@@ -21,7 +21,7 @@ var fly = new Audio()
 var scoreAudio = new Audio()
 
 fly.src = "assets/audio/fly.mp3"
-fly.scoreAudio = "assets/audio/score.mp3"
+scoreAudio.src = "assets/audio/score.mp3"
 
 
 var gap = 90
