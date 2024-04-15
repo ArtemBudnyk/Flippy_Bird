@@ -1,5 +1,20 @@
+
+body {
+    background-color: darkgray;
+}
+
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1 {
+        margin: 50px auto;
+    }
+
+    #canvas {
+        border: 10px solid #000;
+        border-radius: 20px;
+    }
 }
