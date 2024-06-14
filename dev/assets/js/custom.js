@@ -31,6 +31,11 @@ var gap = 90
 
 document.addEventListener("keydown", moveUp)
 
+document.addEventListener("touchmove", moveUp)
+
+document.addEventListener("click", moveUp)
+
+
 function moveUp() {
     yPos -= 29
     fly.play()
